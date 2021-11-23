@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./app.css">
+
+    <script type="text/javascript" src="https://unpkg.com/jquery@3.5.1/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+
+
+
+
+    <title>COV-VRFY</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="title">
+            <img src="/app/assets/covlogo.png" alt="DAPP-Logo">
+        </div>
+
+        <button type="button" class="btn btn-outline-dark float-right" id="mm-connect">Connect to Metamask</button>
+
+
+        <span class="badge rounded-pill bg-success hidden" id="connected-badge"></span>
+        <span class="badge rounded-pill bg-danger" id="not-connected-badge"></span>
+
+        <br>
+        <br>
+        <div class="card" id="info">
+            <h5 class="card-header" style="text-align: center;">COV-Pass on chain Verfication</h5>
+            <div class="card-body" id="main">
+                <p class="card-text">You can either verify or publish your COV-Pass on the blockchain. This provides an
+                    easy way for health officials in clinics and etc. to store valid COVID Certificates on chain
+                    and verify their authenticity.
+                </p>
+               
+                <br>   
+                <p>Document Info:&nbsp;<span class="fw-light" id="cert-result"></span></p>
+                <p>Blockchain Info:&nbsp;<span class="fw-light" id="block-info"></span></p>
+
+                <div class="container text-right">
+                    <button type="button" class="btn btn-outline-primary" id="submit-button">Submit</button>
+                    <button type="button" class="btn btn-outline-primary" id="search-button">Search</button>
+                    
+                </div>
+            </div>
+        </div>
+       
+        <div class="alert alert-success hidden" role="alert" id="submit-alert">
+            Successfully submitted the certificate.
+        </div>
+        <div class="alert alert-warning hidden" role="alert" id="existing-alert">
+            The Document has already been submitted!
+        </div>
+        <div class="alert alert-primary hidden" role="alert" id="notfound-alert">
+            No document with this hash was found.
+        </div>
+     
+
+        <div class="card" , id="qrscan">
+            <!-- <h5 class="card-header">Scan your Cov-Pass</h5> -->
+            <div class="card-body">
+                <p class="card-text">Submit your COV-Pass to store it permanently on-chain.</p>
+                <div class="input-group mb-3">
+
+                    <div id="app">
+
+                        <div id="qr-reader"></div>
+                        <div id="qr-reader-results"></div>
+                    </div>
+                    <div id="output">
+
+                    </div>
+                </div>
+
+
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- </div> -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
