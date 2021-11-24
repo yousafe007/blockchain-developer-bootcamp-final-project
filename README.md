@@ -22,15 +22,13 @@ This project shows a very elementary way of making use of the later form, i.e. s
 
 IMPORTANT: Since this is not a production ready dapp, I had to think of a way to disallow the submission of any random QR-Code. So to make sure that only certain QR-Codes are scanned and submitted, the decoded string contained within the QR starts with "`COVPASS:`" followed by the name of the certificate holder, e.g. "`COVPASS: John Doe`". To generate such QR-Codes with manually defined text, use a website like [this](https://goqr.me/). This provides a slight sense of authenticity to this experimental project. 
 
-<br>
+
 ## Project Demo
 
 "LINK TO YOUTUBE VIDEO"
-<br>
 ## Contact Address on Ropsten:
 
 Ropsten: 0x6B29DDD015b66D799B5DA08238E69D7BB59279C6
-<br>
 ## Deployed and running version of the app:
 
 [link lives here!](https://yousafe007.github.io/blockchain-developer-bootcamp-final-project/app/app.html)
@@ -46,14 +44,12 @@ Ropsten: 0x6B29DDD015b66D799B5DA08238E69D7BB59279C6
 
 
 
-<br>
 ## Start the UI locally
 
 It is recommended to use VS-Code for testing this project.
 
 Make sure to install the [Live Server Plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) by Ritwick Dey to be able to run the website locally. Once installed, open the "app.html" file and then on the bottom right side of the VS-Code window click on "go live".
 
-<br>
 
 ## Deploying the smart contract
 
