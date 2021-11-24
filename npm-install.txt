@@ -1,0 +1,3 @@
+List of npm packages that should be installed before testing the application.
+
+npm i @openzeppelin/contracts
