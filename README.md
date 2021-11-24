@@ -19,6 +19,9 @@ At this moment in time, many countries provide their citizens with a proof of th
 
 This project shows a very elementary way of making use of the later form, i.e. software, to save and verify Covid-19 certificates on-chain.
 
+
+IMPORTANT: Since this is not a production ready dapp, I had to think of a way to disallow the submission of any random QR-Code. So to make sure that only certain QR-Codes are scanned and submitted, the decoded string contained within the QR starts with "`COVPASS:`" followed by the name of the certificate holder, e.g. "`COVPASS: John Doe`". To generate such QR-Codes with manually defined text, use a website like [this](https://goqr.me/). This provides a slight sense of authenticity to this experimental project. 
+
 <br>
 ## Project Demo
 
@@ -64,11 +67,11 @@ npm install -g truffle
 
 Make sure to have these lines of code in the `truffle-config.js` file:
 ```
-  development: {
+development: {
   host: "127.0.0.1",
   port: 7545,
   network_id: "*",
-  },
+}
 ```
 If you wish to change the deployment options above, then you are welcome to do that.
 
@@ -117,7 +120,7 @@ const mnemonic = process.env.MNEMONIC;
 And last but not least, make sure to add the ropsten network settings in the `truffle-config.js` file:
 
 ```
- ropsten: {
+ropsten: {
     provider: () => new HDWalletProvider(mnemonic, process.env.INFURA_URL),
     network_id: "3",
     gas: 5500000
