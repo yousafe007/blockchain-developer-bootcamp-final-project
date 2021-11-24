@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: url("/app/assets/background.png");
+    background-image: url("https://raw.githubusercontent.com/yousafe007/blockchain-developer-bootcamp-final-project/main/app/assets/background.png");
 }
 
 #qrscan {

@@ -30,7 +30,7 @@ Ropsten: 0x6B29DDD015b66D799B5DA08238E69D7BB59279C6
 <br>
 ## <ins>Deployed and running version of the app:</ins>
 
-TODO
+https://yousafe007.github.io/blockchain-developer-bootcamp-final-project/app/app.html
 
 ## <ins>Directory Structure</ins>
 
