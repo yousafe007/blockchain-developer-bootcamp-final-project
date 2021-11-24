@@ -68,3 +68,9 @@ body {
 
 
 }
+
+#spinner{
+    margin-right: 20px;
+    position:relative; 
+    top:5px
+}

@@ -23,183 +23,183 @@ Documents.prototype.init = function () {
             var contractAddress = '0x6B29DDD015b66D799B5DA08238E69D7BB59279C6';
             // var contractAddress= '0x487C40468672326b06811B35BE9B3167Dc43c80A';
 
-            
+
 
             ABI = [
                 {
-                  "anonymous": false,
-                  "inputs": [
-                    {
-                      "indexed": false,
-                      "internalType": "string",
-                      "name": "certInfo",
-                      "type": "string"
-                    }
-                  ],
-                  "name": "LogSubmission",
-                  "type": "event"
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": false,
+                            "internalType": "string",
+                            "name": "certInfo",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "LogSubmission",
+                    "type": "event"
                 },
                 {
-                  "anonymous": false,
-                  "inputs": [
-                    {
-                      "indexed": true,
-                      "internalType": "address",
-                      "name": "previousOwner",
-                      "type": "address"
-                    },
-                    {
-                      "indexed": true,
-                      "internalType": "address",
-                      "name": "newOwner",
-                      "type": "address"
-                    }
-                  ],
-                  "name": "OwnershipTransferred",
-                  "type": "event"
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "previousOwner",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "OwnershipTransferred",
+                    "type": "event"
                 },
                 {
-                  "anonymous": false,
-                  "inputs": [
-                    {
-                      "indexed": false,
-                      "internalType": "address",
-                      "name": "account",
-                      "type": "address"
-                    }
-                  ],
-                  "name": "Paused",
-                  "type": "event"
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": false,
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "Paused",
+                    "type": "event"
                 },
                 {
-                  "anonymous": false,
-                  "inputs": [
-                    {
-                      "indexed": false,
-                      "internalType": "address",
-                      "name": "account",
-                      "type": "address"
-                    }
-                  ],
-                  "name": "Unpaused",
-                  "type": "event"
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": false,
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "Unpaused",
+                    "type": "event"
                 },
                 {
-                  "inputs": [],
-                  "name": "owner",
-                  "outputs": [
-                    {
-                      "internalType": "address",
-                      "name": "",
-                      "type": "address"
-                    }
-                  ],
-                  "stateMutability": "view",
-                  "type": "function",
-                  "constant": true
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true
                 },
                 {
-                  "inputs": [],
-                  "name": "paused",
-                  "outputs": [
-                    {
-                      "internalType": "bool",
-                      "name": "",
-                      "type": "bool"
-                    }
-                  ],
-                  "stateMutability": "view",
-                  "type": "function",
-                  "constant": true
+                    "inputs": [],
+                    "name": "paused",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true
                 },
                 {
-                  "inputs": [],
-                  "name": "renounceOwnership",
-                  "outputs": [],
-                  "stateMutability": "nonpayable",
-                  "type": "function"
+                    "inputs": [],
+                    "name": "renounceOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
                 },
                 {
-                  "inputs": [
-                    {
-                      "internalType": "address",
-                      "name": "newOwner",
-                      "type": "address"
-                    }
-                  ],
-                  "name": "transferOwnership",
-                  "outputs": [],
-                  "stateMutability": "nonpayable",
-                  "type": "function"
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
                 },
                 {
-                  "inputs": [
-                    {
-                      "internalType": "string",
-                      "name": "certInfo",
-                      "type": "string"
-                    }
-                  ],
-                  "name": "publishToChain",
-                  "outputs": [],
-                  "stateMutability": "nonpayable",
-                  "type": "function"
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "certInfo",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "publishToChain",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
                 },
                 {
-                  "inputs": [
-                    {
-                      "internalType": "string",
-                      "name": "certInfo",
-                      "type": "string"
-                    }
-                  ],
-                  "name": "calcSha",
-                  "outputs": [
-                    {
-                      "internalType": "bytes32",
-                      "name": "",
-                      "type": "bytes32"
-                    }
-                  ],
-                  "stateMutability": "pure",
-                  "type": "function",
-                  "constant": true
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "certInfo",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "calcSha",
+                    "outputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "stateMutability": "pure",
+                    "type": "function",
+                    "constant": true
                 },
                 {
-                  "inputs": [
-                    {
-                      "internalType": "string",
-                      "name": "certInfo",
-                      "type": "string"
-                    }
-                  ],
-                  "name": "checkCert",
-                  "outputs": [
-                    {
-                      "internalType": "bool",
-                      "name": "",
-                      "type": "bool"
-                    }
-                  ],
-                  "stateMutability": "view",
-                  "type": "function",
-                  "constant": true
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "certInfo",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "checkCert",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "constant": true
                 },
                 {
-                  "inputs": [],
-                  "name": "pause",
-                  "outputs": [],
-                  "stateMutability": "nonpayable",
-                  "type": "function"
+                    "inputs": [],
+                    "name": "pause",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
                 },
                 {
-                  "inputs": [],
-                  "name": "unpause",
-                  "outputs": [],
-                  "stateMutability": "nonpayable",
-                  "type": "function"
+                    "inputs": [],
+                    "name": "unpause",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
                 }
-              ]
+            ]
 
             // Create the contract instance for the specific address provided in the configuration
             this.web3 = new Web3(window.ethereum)
@@ -274,10 +274,13 @@ Documents.prototype.submit = async function () {
 
                 console.log("CLICK SUBMIT")
 
+                // show the spinner while submitting
+
+                $("#spinner").show();
                 submitStatus = true;
 
                 await this.instance.methods.publishToChain(Documents.scanText).send({ from: ethereum.selectedAddress })
-                    .on('error', function (error, receipt) { 
+                    .on('error', function (error, receipt) {
                         console.log("er:" + error)
                         console.log('receipt: ' + receipt)
                         // $("#existing-alert").show();
@@ -305,6 +308,7 @@ Documents.prototype.submit = async function () {
         alert("Please submit a correct QR Code!")
 
     }
+    $("#spinner").hide();
 
 };
 

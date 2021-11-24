@@ -17,7 +17,8 @@
 <body>
     <div class="container">
         <div id="title">
-            <img src="https://raw.githubusercontent.com/yousafe007/blockchain-developer-bootcamp-final-project/main/app/assets/covlogo.png" alt="DAPP-Logo">
+            <img src="https://raw.githubusercontent.com/yousafe007/blockchain-developer-bootcamp-final-project/main/app/assets/covlogo.png"
+                alt="DAPP-Logo">
         </div>
 
         <button type="button" class="btn btn-outline-dark float-right" id="mm-connect">Connect to Metamask</button>
@@ -35,19 +36,20 @@
                     easy way for health officials in clinics and etc. to store valid COVID Certificates on chain
                     and verify their authenticity.
                 </p>
-               
-                <br>   
+
+                <br>
                 <p>Document Info:&nbsp;<span class="fw-light" id="cert-result"></span></p>
                 <p>Blockchain Info:&nbsp;<span class="fw-light" id="block-info"></span></p>
 
                 <div class="container text-right">
+                    <div class="spinner-border text-secondary hidden" id="spinner" role="status"></div>
                     <button type="button" class="btn btn-outline-primary" id="submit-button">Submit</button>
                     <button type="button" class="btn btn-outline-primary" id="search-button">Search</button>
-                    
+
                 </div>
             </div>
         </div>
-       
+
         <div class="alert alert-success hidden" role="alert" id="submit-alert">
             Successfully submitted the certificate.
         </div>
@@ -57,7 +59,7 @@
         <div class="alert alert-primary hidden" role="alert" id="notfound-alert">
             No certificate was found.
         </div>
-     
+
 
         <div class="card" , id="qrscan">
             <!-- <h5 class="card-header">Scan your Cov-Pass</h5> -->
@@ -77,7 +79,7 @@
 
 
             </div>
-            
+
         </div>
     </div>
 
