@@ -20,8 +20,8 @@ Documents.prototype.init = function () {
             console.log('MetaMask is active')
 
 
-            var contractAddress = '0x6B29DDD015b66D799B5DA08238E69D7BB59279C6';
-            // var contractAddress= '0x487C40468672326b06811B35BE9B3167Dc43c80A';
+            // var contractAddress = '0x6B29DDD015b66D799B5DA08238E69D7BB59279C6';
+            var contractAddress= '0xc8cA843376c0579325A64bb3bE62c2c2882BB70b';
 
 
 
