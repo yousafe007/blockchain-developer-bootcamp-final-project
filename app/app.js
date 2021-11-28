@@ -10,6 +10,7 @@ Documents.prototype.init = function () {
         console.log('window.ethereum is enabled')
 
         if (!(ethereum.selectedAddress == null)) {
+            // truncating the address shown in the green badge
             ethadd= ethereum.selectedAddress.replace(ethereum.selectedAddress.substring(4,ethereum.selectedAddress.length-4), "...")
             document.getElementById("connected-badge").innerHTML = "<b>Connected: " +ethadd+ "</b>";
             $("#connected-badge").show();
@@ -295,8 +296,10 @@ Documents.prototype.connect = async function () {
 
     try {
         await ethereum.request({ method: 'eth_requestAccounts' })
-        var connectedAddress = ethereum.selectedAddress
-        document.getElementById("connected-badge").innerHTML = "<b>Connected: " + connectedAddress + "</b>";
+        // truncating the address shown in the green badge
+        ethadd= ethereum.selectedAddress.replace(ethereum.selectedAddress.substring(4,ethereum.selectedAddress.length-4), "...")
+        document.getElementById("connected-badge").innerHTML = "<b>Connected: " +ethadd+ "</b>";
+
         $("#connected-badge").show();
         $("#mm-connect").hide();
 
