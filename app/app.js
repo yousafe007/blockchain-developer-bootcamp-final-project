@@ -9,14 +9,14 @@ Documents.prototype.init = function () {
     if (typeof window.ethereum !== 'undefined') {
         console.log('window.ethereum is enabled')
 
-        // if (!(ethereum.selectedAddress == null)) {
-        //     // truncating the address shown in the green badge
-        //     ethadd= ethereum.selectedAddress.replace(ethereum.selectedAddress.substring(4,ethereum.selectedAddress.length-4), "...")
-        //     document.getElementById("connected-badge").innerHTML = "<b>Connected: " +ethadd+ "</b>";
-        //     $("#connected-badge").show();
-        //     $("#mm-connect").hide();
+        if (!(ethereum.selectedAddress == null)) {
+            // truncating the address shown in the green badge
+            ethadd= ethereum.selectedAddress.replace(ethereum.selectedAddress.substring(4,ethereum.selectedAddress.length-4), "...")
+            document.getElementById("connected-badge").innerHTML = "<b>Connected: " +ethadd+ "</b>";
+            $("#connected-badge").show();
+            $("#mm-connect").hide();
 
-        // }
+        }
 
         if (window.ethereum.isMetaMask === true) {
             console.log('MetaMask is active')
@@ -236,6 +236,7 @@ Documents.prototype.checkCert = async function () {
         var blockinfo = document.getElementById('block-info');
         if (!res) {
             blockinfo.innerHTML = "Certificate is not yet saved on chain!"
+            $("#notfound-alert").show()
 
         } else {
             blockinfo.innerHTML = "Certificate is saved on chain."
@@ -265,20 +266,13 @@ Documents.prototype.submit = async function () {
             if (Documents.scanText.startsWith('COVPASS:')) {
                 console.log("CLICK SUBMIT")
                 $("#spinner").show();
-                submitStatus = true;
 
                 await this.instance.methods.publishToChain(Documents.scanText).send({ from: ethereum.selectedAddress })
                     .on('error', function (error, receipt) {
                         console.log("er:" + error)
                         console.log('receipt: ' + receipt)
-                        // $("#existing-alert").show();
-                        submitStatus = false
-
-                    }).on('confirmation', function (confirmationNumber, receipt) {
-
-                        if (submitStatus) {
-                            $("#submit-alert").show();
-                        }
+                    }).on('receipt', function (receipt) {
+                      $("#submit-alert").show();
                     })
             } else {
                 alert("Please submit a correct QR Code!")
@@ -291,6 +285,7 @@ Documents.prototype.submit = async function () {
         alert("The transaction was not submitted")
     }
     $("#spinner").hide();
+
 };
 
 // Connects with metamask
