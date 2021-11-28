@@ -10,14 +10,14 @@
 
 ## Project description
 
-The following dapp seeks to be a proof-of-concept for on-Chain Covid-19 Certificate Verification and Submission.
+The following dapp seeks to be a proof-of-concept for on-chain Covid-19 certificate verification and submission. The project is based on the Proof-of-Existence exercise discussed in the bootcamp.
 
-At this moment in time, many countries provide their citizens with a proof of their vaccination in either physical, i.e. as a hard document or in software form, which can be done by encoding the patient's vaccine information into a QR-Code, allowing for easy verification. 
+At this moment in time, many countries provide their citizens with a proof of their vaccination in either physical, i.e. as a hard document or in software form, which in its most simplest form can be done by encoding the patient's vaccine information into a QR-Code, allowing for easy verification. 
 
 This project shows a very elementary way of making use of the later form, i.e. software, to save and verify Covid-19 certificates on-chain.
 
 
-IMPORTANT: Since this is not a production ready dapp, I had to think of a way to disallow the submission of any random QR-Code. So to make sure that only certain QR-Codes are scanned and submitted, the decoded string contained within the QR starts with "`COVPASS:`" followed by the name of the certificate holder, e.g. "`COVPASS: John Doe`". To generate such QR-Codes with manually defined text, use a website like [this](https://goqr.me/). This provides a slight sense of authenticity to this experimental project. 
+IMPORTANT: Since this is not a production ready dapp, I had to think of a way to disallow the submission of any sort of random QR-Code, which can be malicious in certain cases. So to make sure that only certain QR-Codes are submitted, the decoded string contained within the QR-code starts with the prefix "`COVPASS:`" followed by the name of the certificate holder, e.g. "`COVPASS: John Doe`". To generate such QR-Codes with manually defined text, use a website like [this](https://goqr.me/). This provides a slight sense of authenticity to this experimental project. 
 
 
 ## Project Demo
@@ -39,24 +39,24 @@ Ropsten: 0x7873015dE5378D5a37AAaA77afDbAA122256C8De
 - node_modules: contains node-modules, which are ignored from the commits
 - tests - contains the smart contract unit tests 
 
-
-
 ## Start the UI locally
 
 It is recommended to use VS-Code for testing this project.
 
-Make sure to install the [Live Server Plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) by Ritwick Dey to be able to run the website locally. Once installed, open the "app.html" file and then on the bottom right side of the VS-Code window click on "go live".
+Make sure to install the [Live Server Plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) by Ritwick Dey to be able to run the website locally. Once installed, open the "app.html" file in VS-Code and then on the bottom right side of the window click on "go live". This should open up the page in your default browser.
 
 
 ## Deploying the smart contract
 
-In a new terminal, navigate to the project root and install the projects dependencies along with truffle and ganache-cli.
+In a new terminal window, navigate to the project root and install the projects dependencies along with truffle, web3 and ganache-cli.
 
 ```
 npm install
 npm install -g ganache-cli
 npm install -g truffle
+npm install web3
 ```
+
 
 Make sure to have these lines of code in the `truffle-config.js` file:
 ```
@@ -68,7 +68,7 @@ development: {
 ```
 If you wish to change the deployment options above, then you are welcome to do that.
 
-For the ease of use, we are going to use ganache UI. Download it from [here](https://www.trufflesuite.com/ganache).
+For ease of use, we are going to use ganache UI. Download it from [here](https://www.trufflesuite.com/ganache).
 
 Run ganache UI, select "New Workspace" and then in the workspace tab, click on add project and select the`truffle-config.js` in the root directory of the project. Go to the Server tab and then make sure the host name is set to: `127.0.0.1 - lo` and port number to 7545, or as set in the `truffle-config.js` file. Also make sure to add a local network with the above configuration in metamask installed to your browser to test the app later.
 
@@ -86,7 +86,7 @@ Once deployed, copy the contract address for the CovVrfy contract. The contract 
 
 
 ## Deploying to a public network (Some of the steps have already been done and can be checked in the corresponding files)
-
+We will now deploy the contract on Ropsten, but you can decide which network to deploy it to.
 Install the following packages:
 ```
 npm install @truffle/hdwallet-provider
