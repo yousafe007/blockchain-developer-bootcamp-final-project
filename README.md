@@ -2,9 +2,6 @@
 
 
 
-<!-- <p align="center">
-![LOGO](/app/assets/covlogo.png)
-</p> -->
 
 <p align="center">
   <img  src="/app/assets/covlogo.png">
@@ -113,7 +110,7 @@ dotenv.config();
 const mnemonic = process.env.MNEMONIC;
 ```
 
-And last but not least, make sure to add the ropsten network settings in the `truffle-config.js` file:
+Make sure to add the ropsten network settings in the `truffle-config.js` file:
 
 ```
 ropsten: {
@@ -129,6 +126,8 @@ Deploy it to Ropsten by running this in the root folder of the project:
 ```
 truffle migrate --network ropsten   
 ```
+
+Similar to deploying on a local network, replace the contract address in the `app.js` file with the newly deployed contract's address (see above).
 ## Running the tests
 
 //TODO

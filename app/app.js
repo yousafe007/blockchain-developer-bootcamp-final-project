@@ -10,7 +10,8 @@ Documents.prototype.init = function () {
         console.log('window.ethereum is enabled')
 
         if (!(ethereum.selectedAddress == null)) {
-            document.getElementById("connected-badge").innerHTML = "<b>Connected: " + ethereum.selectedAddress + "</b>";
+            ethadd= ethereum.selectedAddress.replace(ethereum.selectedAddress.substring(4,ethereum.selectedAddress.length-4), "...")
+            document.getElementById("connected-badge").innerHTML = "<b>Connected: " +ethadd+ "</b>";
             $("#connected-badge").show();
             $("#mm-connect").hide();
 
@@ -211,6 +212,9 @@ Documents.prototype.init = function () {
             document.getElementById("mm-connect").disabled = true;
             document.getElementById("ssubmit-button").disabled = true;
             document.getElementById("search-button").disabled = true;
+            $("#qrscan").hide();
+
+            
         }
     } else {
         console.log('window.ethereum is not found')
@@ -218,6 +222,8 @@ Documents.prototype.init = function () {
         document.getElementById("mm-connect").innerHTML = "Please Install Metamask";
         document.getElementById("submit-button").disabled = true;
         document.getElementById("search-button").disabled = true;
+        $("#qrscan").hide();
+
     }
 };
 
@@ -305,7 +311,8 @@ Documents.prototype.submit = async function () {
         }
 
     } catch (error) {
-        alert("Please submit a correct QR Code!")
+        // alert("Please submit a correct QR Codesdsd!")
+        console.log(error)
 
     }
     $("#spinner").hide();
