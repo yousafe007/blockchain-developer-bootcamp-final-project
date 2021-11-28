@@ -14,7 +14,8 @@ The contract inhabits only state variables which are used and does not contain r
 Contracts are deployed and tested with the same pragma version (version `0.8.0`) as explained in the SWC-Registry to avoid any unwanted vulnerabilities in the contract functionality.
 
 
+## <ins>Using modifiers to only validate application logic</ins>
+Modifiers in the contracts are only used to validate code workflow and behaviour
 ## <ins>SWC-123 - Requirement Violation</ins>
 
 Execution can resume if the hash that is already stored in the state array is submitted again. To avoid this, it is made sure that the hash of a COVID certificate is not saved twice using `require()` in the `publishToChain` method. In this way, any input is checked before pushing the hash to the state array. 
-
