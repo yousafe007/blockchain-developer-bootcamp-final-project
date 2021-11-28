@@ -16,14 +16,14 @@ contract("CovVrfy Contract Test", async accounts => {
         exists = await instance.checkCert.call("COVPASS: FOO");
         assert.equal(exists, true);
     });
-    it('function "checkCert" returns false for certificates not saved to chain', async () => {
+    it('Function "checkCert" returns false for certificates not saved to chain', async () => {
         const instance = await CovVrfy.deployed();
         exists = await instance.checkCert.call("COVPASS: BAR");
         assert.equal(exists, false);
     });
 
 
-    it("owner can pause and then unpause the contract", async function () {
+    it("Owner can pause and then unpause the contract", async function () {
 
 
         const instance = await CovVrfy.deployed();
@@ -34,7 +34,7 @@ contract("CovVrfy Contract Test", async accounts => {
     });
 
 
-    it("submission should fail if contract is paused", async function () {
+    it("Submission should fail if contract is paused", async function () {
         try {
             const account_one = accounts[0];
 

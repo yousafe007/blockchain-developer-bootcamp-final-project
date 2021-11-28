@@ -25,9 +25,9 @@ IMPORTANT: Since this is not a production ready dapp, I had to think of a way to
 "LINK TO YOUTUBE VIDEO"
 ## Contact Address on Ropsten:
 
-Ropsten: 0x7873015dE5378D5a37AAaA77afDbAA122256C8De
+Ropsten: 0xaf7854C86aB9F533F05E6396927B5dff9703bDdD
 ## Deployed and running version of the app:
-
+Make sure to use Meta-Mask on Ropsten!
 [link lives here!](https://yousafe007.github.io/blockchain-developer-bootcamp-final-project/app/app.html)
 
 ## Directory Structure
