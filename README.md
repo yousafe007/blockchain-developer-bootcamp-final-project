@@ -25,7 +25,7 @@ IMPORTANT: Since this is not a production ready dapp, I had to think of a way to
 "LINK TO YOUTUBE VIDEO"
 ## Contact Address on Ropsten:
 
-Ropsten: 0x6B29DDD015b66D799B5DA08238E69D7BB59279C6
+Ropsten: 0x7873015dE5378D5a37AAaA77afDbAA122256C8De
 ## Deployed and running version of the app:
 
 [link lives here!](https://yousafe007.github.io/blockchain-developer-bootcamp-final-project/app/app.html)
@@ -131,3 +131,6 @@ Similar to deploying on a local network, replace the contract address in the `ap
 ## Running the tests
 
 Run Gnache-CLI or Gnache UI as explained above in 'deploying the smart contract' section. Once the local testnet is running, open the terminal in the root folder of the project and run `truffle test`
+
+## Credits
+The QR-Scanner library was implemented by mebjas and the code can be found in his [repository](https://github.com/mebjas/html5-qrcode).
