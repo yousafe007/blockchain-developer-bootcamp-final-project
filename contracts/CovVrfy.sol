@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-3.0
-// 0x6B29DDD015b66D799B5DA08238E69D7BB59279C6
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/security/Pausable.sol";

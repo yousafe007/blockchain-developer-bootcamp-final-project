@@ -1,3 +1,8 @@
 List of npm packages that should be installed before testing the application:
 
 npm i @openzeppelin/contracts
+npm install @truffle/hdwallet-provider
+npm install dotenv
+npm install -g ganache-cli
+npm install -g truffle
+npm install web3

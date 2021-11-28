@@ -134,3 +134,6 @@ Run Gnache-CLI or Gnache UI as explained above in 'deploying the smart contract'
 
 ## Credits
 The QR-Scanner library was implemented by mebjas and the code can be found in his [repository](https://github.com/mebjas/html5-qrcode).
+
+## My public Ethereum address for the certification as an NFT
+0x3420fde3a09aAD23307c539255c9B848Ea00D008
