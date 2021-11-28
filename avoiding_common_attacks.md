@@ -3,7 +3,7 @@
 ## <ins>SWC-102 - Outdated Compiler Version</ins>
 <br>
 
-Solidity version 0.8.0 is used, which is safer and a much recent release.
+Solidity version `0.8.0` is used, which is safer and a much recent release.
 
 
 ## <ins>SWC-131 - Presence of unused variables</ins>
@@ -17,8 +17,4 @@ Contracts are deployed and tested with the same pragma version (version `0.8.0`)
 ## <ins>SWC-123 - Requirement Violation</ins>
 
 Execution can resume if the hash that is already stored in the state array is submitted again. To avoid this, it is made sure that the hash of a COVID certificate is not saved twice using `require()` in the `publishToChain` method. In this way, any input is checked before pushing the hash to the state array. 
-
-
-
-
 
