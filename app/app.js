@@ -9,14 +9,14 @@ Documents.prototype.init = function () {
     if (typeof window.ethereum !== 'undefined') {
         console.log('window.ethereum is enabled')
 
-        if (!(ethereum.selectedAddress == null)) {
-            // truncating the address shown in the green badge
-            ethadd= ethereum.selectedAddress.replace(ethereum.selectedAddress.substring(4,ethereum.selectedAddress.length-4), "...")
-            document.getElementById("connected-badge").innerHTML = "<b>Connected: " +ethadd+ "</b>";
-            $("#connected-badge").show();
-            $("#mm-connect").hide();
+        // if (!(ethereum.selectedAddress == null)) {
+        //     // truncating the address shown in the green badge
+        //     ethadd= ethereum.selectedAddress.replace(ethereum.selectedAddress.substring(4,ethereum.selectedAddress.length-4), "...")
+        //     document.getElementById("connected-badge").innerHTML = "<b>Connected: " +ethadd+ "</b>";
+        //     $("#connected-badge").show();
+        //     $("#mm-connect").hide();
 
-        }
+        // }
 
         if (window.ethereum.isMetaMask === true) {
             console.log('MetaMask is active')
