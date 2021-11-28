@@ -22,7 +22,7 @@ IMPORTANT: Since this is not a production ready dapp, I had to think of a way to
 
 ## Project Demo
 
-"LINK TO YOUTUBE VIDEO"
+[link to the video](https://youtu.be/JNayirqWSlk)
 ## Contact Address on Ropsten:
 
 Ropsten: 0xaf7854C86aB9F533F05E6396927B5dff9703bDdD
