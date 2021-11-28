@@ -311,8 +311,7 @@ Documents.prototype.submit = async function () {
         }
 
     } catch (error) {
-        // alert("Please submit a correct QR Codesdsd!")
-        console.log(error)
+        alert("The transaction was not submitted")
 
     }
     $("#spinner").hide();

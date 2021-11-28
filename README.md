@@ -130,4 +130,4 @@ truffle migrate --network ropsten
 Similar to deploying on a local network, replace the contract address in the `app.js` file with the newly deployed contract's address (see above).
 ## Running the tests
 
-//TODO
+Run Gnache-CLI or Gnache UI as explained above in 'deploying the smart contract' section. Once the local testnet is running, open the terminal in the root folder of the project and run `truffle test`
