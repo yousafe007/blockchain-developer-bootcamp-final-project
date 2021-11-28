@@ -20,7 +20,7 @@ Documents.prototype.init = function () {
 
         if (window.ethereum.isMetaMask === true) {
             console.log('MetaMask is active')
-            var contractAddress= '0x7873015dE5378D5a37AAaA77afDbAA122256C8De';
+            var contractAddress= '0xaf7854C86aB9F533F05E6396927B5dff9703bDdD';
             ABI = [
                 {
                   "anonymous": false,
