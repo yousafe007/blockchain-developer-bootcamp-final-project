@@ -38,6 +38,21 @@ contract("CovVrfy Contract Test", async accounts => {
         assert.equal(await instance.paused(), false)
     });
 
+      // This test is for checking whether a hash is published already, regardless of the contract being paused by the owner of the contract.
+      it("Search function should work even if the contract is paused", async function () {
+
+        const account_one = accounts[0];
+        const instance = await CovVrfy.deployed();
+        // Publish a cert
+        await instance.publishToChain("COVPASS: FOOBAR", { from: account_one })
+        await instance.pause();
+        assert.equal(await instance.paused(), true)
+        exists = await instance.checkCert.call("COVPASS: FOOBAR");
+        assert.equal(exists, true)
+        await instance.unpause();
+        assert.equal(await instance.paused(), false)
+    });
+
     // Pausing the contract should dissalow any submissions to chain. In this test, it is made sure that an error occurs if the publishToChain function is called while the contract is paused.
     it("Submission should fail if contract is paused", async function () {
         try {
@@ -51,6 +66,8 @@ contract("CovVrfy Contract Test", async accounts => {
             assert.include(err.message, "revert", "The error message should contain 'revert'");
         }
     });
+
+  
 
 
 
