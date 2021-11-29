@@ -19,6 +19,8 @@ This project shows a very elementary way of making use of the later form, i.e. s
 
 IMPORTANT: Since this is not a production ready dapp, I had to think of a way to disallow the submission of any sort of random QR-Code, which can be malicious in certain cases. So to make sure that only certain QR-Codes are submitted, the decoded string contained within the QR-code starts with the prefix "`COVPASS:`" followed by the name of the certificate holder, e.g. "`COVPASS: John Doe`". To generate such QR-Codes with manually defined text, use a website like [this](https://goqr.me/). This provides a slight sense of authenticity to this experimental project. 
 
+You can find some sample QR-codes in the `sample-qrcodes` folder for testing.
+
 
 ## Project Demo
 
