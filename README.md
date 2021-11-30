@@ -50,6 +50,7 @@ Make sure to install the [Live Server Plugin](https://marketplace.visualstudio.c
 
 
 ## Deploying the smart contract
+Note: Node version 16.13.0 LTS was used while testing and building this project.
 
 In a new terminal window, navigate to the project root and install the projects dependencies along with truffle, web3 and ganache-cli.
 
