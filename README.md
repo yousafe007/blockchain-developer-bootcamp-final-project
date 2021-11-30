@@ -30,6 +30,7 @@ You can find some sample QR-codes in the `sample-qrcodes` folder for testing.
 Ropsten: 0xaf7854C86aB9F533F05E6396927B5dff9703bDdD
 ## Deployed and running version of the app:
 Make sure to use Meta-Mask on Ropsten!
+
 [link lives here!](https://yousafe007.github.io/blockchain-developer-bootcamp-final-project/app/app.html)
 
 ## Directory Structure
@@ -87,7 +88,8 @@ truffle migrate --network development --reset
 Once deployed, copy the contract address for the CovVrfy contract. The contract address in the `app.js` file in the "app" folder should be replaced with the copied contract address. The variable named `contractAddress` for the contract address is located inside the `Documents.prototype.init` function.
 
 
-## Deploying to a public network (Some of the steps have already been done and can be checked in the corresponding files)
+## Deploying to a public network
+
 We will now deploy the contract on Ropsten, but you can decide which network to deploy it to.
 Install the following packages:
 ```
@@ -102,7 +104,7 @@ MNEMONIC="this is not a mnemonic :)"
 INFURA_URL="the url"
 ```
 
-
+<!-- 
 
 Paste this code into your `truffle-config.js` file:
 ```
@@ -121,7 +123,7 @@ ropsten: {
     gas: 5500000
 }
 
-```
+``` -->
 
 Deploy it to Ropsten by running this in the root folder of the project:
 
@@ -139,3 +141,8 @@ The QR-Scanner library was implemented by mebjas and the code can be found in hi
 
 ## My public Ethereum address for the certification as an NFT
 0x3420fde3a09aAD23307c539255c9B848Ea00D008
+
+## TODO
+1. Provide a more user friendly way to automatically promt the user to change the network on metamask.
+2. Some further UI improvements
+3. Modifiy the smart contract to avoid saving any random string to the state array, which for now is only done by the front end code.
